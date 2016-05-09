@@ -1,0 +1,21 @@
+<div class="item item-input">
+  <label class="order">Product</label>
+  <select class="item item-input" ng-model="select">
+    <option ng-repeat="product in products">{{product.name}}</option>
+    <span ng-sow="!select">Choose</span>
+  </select>
+</div>
+
+<div class="item item-input">
+  <label class="order">Payment Method</label>
+  <select class="item item-input" ng-model="selectedMethod" ng-change="selected()">
+    <option>visa</option>
+    <option>cach</option>
+  </select>
+</div>
+
+<div class="item item-input" ng-show="visacheck()">
+  <input type="number" placeholder="Visa Number" ng-model="visaNumber" limit-to="14">
+</div>
+
+<a href="" class="button button-success button-block">Submit</a>

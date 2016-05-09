@@ -1,0 +1,23 @@
+<div class="list">
+
+
+
+  <label class="item item-input">
+    <span class="input-label">Username</span>
+    <input type="text" ng-model="name" required name="userName">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Password</span>
+    <input type="password" ng-model="password" required name="userPassword">
+  </label>
+  <br>
+
+  <button  ng-click="newUser()" class="button  button-block button-positive ">
+  Register
+</button>
+  <p ng-if="register.userName.$error.required">
+    please enter your name and password
+  </p>
+
+</div>
